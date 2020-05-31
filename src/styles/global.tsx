@@ -46,7 +46,7 @@ const Reset = () => css`
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 95%;
   }
 `;
 

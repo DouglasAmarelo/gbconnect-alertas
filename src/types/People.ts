@@ -1,7 +1,9 @@
 import PersonProps from './Person';
 
 type PeopleProps = {
-  people: PersonProps[];
+  people: {
+    [key: string]: PersonProps;
+  };
 };
 
 export default PeopleProps;

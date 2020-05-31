@@ -4,10 +4,10 @@ import people from './data/people';
 
 import GlobalStyle from './styles/global';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import People from './components/People';
-import CardList from './components/CardList';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { People } from './components/People';
+import { CardList } from './components/CardList';
 
 function App() {
   return (
