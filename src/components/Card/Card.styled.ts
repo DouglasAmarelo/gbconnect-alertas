@@ -7,13 +7,16 @@ export const Card = styled.article`
   color: var(--secondaryTextColor);
   display: flex;
   flex: 1;
-  margin: 0.5em;
+  margin: 0.2em;
   max-width: 350px;
-  padding: 30px;
+  padding: 0.7em;
+
   transition: box-shadow 0.2s, opacity 0.3s, transform 0.3s;
 
   @media all and (min-width: 640px) {
     flex-direction: column;
+    margin: 0.5em;
+    padding: 1.5em;
   }
 
   &:not(.active) {
@@ -30,6 +33,8 @@ export const Card = styled.article`
   &:hover,
   &.active {
     box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
   }
 
   header {
@@ -53,7 +58,7 @@ export const Date = styled.time`
 `;
 
 export const Title = styled.h2`
-  font-size: min(24px, 5vw);
+  font-size: min(24px, 6vw);
   font-weight: 500;
   margin: 0;
 `;
@@ -76,7 +81,9 @@ export const ImageContainer = styled.div`
   }
 
   @media all and (max-width: 640px) {
-    margin-right: 20px;
+    margin-right: 0.5em;
+    max-height: calc((${imageSize}) / 2);
+    max-width: calc((${imageSize}) / 2);
   }
 
   img {

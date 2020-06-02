@@ -3,7 +3,7 @@ import React from 'react';
 import * as S from './Footer.style';
 
 const Footer: React.FC = () => (
-  <footer>
+  <S.Footer>
     <S.FooterText>
       Made with{' '}
       <span role="img" aria-label="love">
@@ -19,7 +19,7 @@ const Footer: React.FC = () => (
         @DouglasAmarelo
       </a>
     </S.FooterText>
-  </footer>
+  </S.Footer>
 );
 
 export default Footer;

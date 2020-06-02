@@ -19,14 +19,17 @@ const Reset = () => css`
 
   html,
   body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
     background: var(--primaryColor);
     background: linear-gradient(
       90deg,
       var(--primaryColor) 0%,
       var(--secondaryColor) 100%
     );
-    margin: 0;
-    padding: 0;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@500;900&display=swap');
