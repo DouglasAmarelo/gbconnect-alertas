@@ -50,10 +50,10 @@ To run this project locally, you can:
 
 1. Clone this repository: `git clone https://github.com/DouglasAmarelo/gbconnect-alertas.git`
 2. Navigate to the project folder: `cd gbconnect-alertas`
-3. Install all the dependencies: `npm install` or `yarn`
+3. Install all dependencies: `npm install` or `yarn`
 4. Start the project: `npm start` or `yarn`
 
-Now you can view gbconnect-alertas in the browser.
+You can now access **gbconnect-alertas** in your browser.
 
   - Local:            http://localhost:3000
   - On Your Network:  http://192.168.0.34:3000
@@ -61,7 +61,7 @@ Now you can view gbconnect-alertas in the browser.
 
 <h2>🤝 Contributing</h2>
 
-Contributions, report errors and new ideias, are always welcome!
+Contributions, bug reports and new ideias, are always welcome!
 
 Please, visit the [issues page](https://github.com/DouglasAmarelo/gbconnect-alertas/issues).
 
