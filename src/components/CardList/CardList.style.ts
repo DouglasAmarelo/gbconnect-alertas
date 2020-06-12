@@ -9,10 +9,4 @@ export const CardList = styled.section`
   @media all and (max-width: 640px) {
     flex-direction: column;
   }
-
-  &:hover {
-    article {
-      opacity: 1;
-    }
-  }
 `;

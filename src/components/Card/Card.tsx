@@ -7,14 +7,22 @@ import PersonProps from '../../types/Person';
 
 type CardProps = PersonProps & {
   date?: string;
-  active?: any;
+  yesterday?: boolean;
+  today?: boolean;
+  tomorrow?: boolean;
 };
 
-const Card: React.FC<CardProps> = ({ name, nickName, photo, date, active }) => {
+const Card: React.FC<CardProps> = ({
+  name,
+  nickName,
+  photo,
+  date,
+  ...orderedDays
+}) => {
   const formatedDate = moment(date).format('DD/MM');
 
   return (
-    <S.Card className={active ? 'active' : ''}>
+    <S.Card {...orderedDays}>
       <header>
         <S.Date dateTime={date}>{formatedDate}</S.Date>
         <small>{name}</small>

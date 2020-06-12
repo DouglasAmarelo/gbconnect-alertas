@@ -1,16 +1,26 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-export const Card = styled.article`
+type CardProps = {
+  yesterday?: boolean;
+  today?: boolean;
+  tomorrow?: boolean;
+};
+
+export const Card = styled.article<CardProps>`
   align-items: center;
   background: var(--primaryTextColor);
   border-radius: 4px;
+  box-shadow: none;
   color: var(--secondaryTextColor);
   display: flex;
   flex: 1;
-  margin: 0.2em;
+  margin: 1em;
   max-width: 350px;
+  opacity: 0.3;
   padding: 0.7em;
-
+  position: relative;
+  transform: scale(0.8);
   transition: box-shadow 0.2s, opacity 0.3s, transform 0.3s;
 
   @media all and (min-width: 640px) {
@@ -19,22 +29,59 @@ export const Card = styled.article`
     padding: 1.5em;
   }
 
-  &:not(.active) {
-    box-shadow: none;
-    opacity: 0.3;
-    transform: scale(0.8);
+  @media all and (max-width: 640px) {
+    width: 100%;
   }
+
+  ${({ yesterday }) =>
+    yesterday &&
+    css`
+      order: 1;
+
+      &:before {
+        content: 'Ontem';
+      }
+    `}
+
+  ${({ tomorrow }) =>
+    tomorrow &&
+    css`
+      order: 3;
+
+      &:before {
+        content: 'Amanhã';
+      }
+    `}
+
+  ${({ today }) =>
+    today &&
+    css`
+      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      order: 2;
+      position: relative;
+      transform: scale(1);
+      z-index: 10;
+
+      &:before {
+        content: 'Hoje';
+      }
+    `}
 
   &:hover {
     opacity: 1;
     transform: scale(1);
   }
 
-  &:hover,
-  &.active {
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 10;
+  &:before {
+    color: var(--primaryTextColor);
+    font-size: 12px;
+    left: 50%;
+    letter-spacing: 2px;
+    position: absolute;
+    text-transform: uppercase;
+    top: -22px;
+    transform: translateX(-50%);
   }
 
   header {
@@ -43,6 +90,10 @@ export const Card = styled.article`
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
+    @media all and (max-width: 640px) {
+      margin: auto;
+    }
   }
 
   small {
