@@ -1,44 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+______
 
-## Available Scripts
+<h1 align="center">👋 Welcome to: GBC Alertas 👋</h1>
 
-In the project directory, you can run:
+<p align="center">
+	<a href="https://twitter.com/DouglasAmarelo" target="_blank">
+		<img alt="Twitter: DouglasAmarelo" src="https://img.shields.io/twitter/follow/DouglasAmarelo.svg?style=social" />
+	</a>
+	&nbsp; &nbsp;
+	<a href="https://github.com/DouglasAmarelo?tab=followers" target="_blank">
+		<img alt="GitHub followers" src="https://img.shields.io/github/followers/douglasamarelo?label=Follow%20me&style=social" />
+	</a>
+</p>
 
-### `yarn start`
+<p align="center">
+  <a href="https://app.netlify.com/sites/gbconnect-alertas/deploys">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/163b867c-8fb0-4cf6-9e8a-65fbb8067409/deploy-status" />
+  </a>
+  &nbsp; &nbsp;
+	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/DouglasAmarelo/create-rc.svg" />
+	&nbsp; &nbsp;
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/DouglasAmarelo/create-rc.svg" />
+	&nbsp; &nbsp;
+	<img alt="Repository size" src="https://img.shields.io/github/repo-size/DouglasAmarelo/create-rc.svg" />
+  &nbsp; &nbsp;
+ <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/react-rc.svg" />
+  &nbsp; &nbsp;
+  <a href="https://github.com/DouglasAmarelo/create-rc/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/DouglasAmarelo/create-rc.svg" />
+  </a>
+	&nbsp; &nbsp;
+  <a href="https://github.com/DouglasAmarelo/create-rc/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/DouglasAmarelo/create-rc.svg" />
+  </a>
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+______
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<h2>📝 About this project</h2>
 
-### `yarn test`
+A practical way to check who is responsible for looking at the app's alerts during the day.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application is hosted here: https://gbconnect-alertas.netlify.app/
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<h2>👨‍💻 How to use</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, you can:
 
-### `yarn eject`
+1. Clone this repository: `git clone https://github.com/DouglasAmarelo/gbconnect-alertas.git`
+2. Navigate to the project folder: `cd gbconnect-alertas`
+3. Install all dependencies: `npm install` or `yarn`
+4. Start the project: `npm start` or `yarn`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You can now access **gbconnect-alertas** in your browser.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - Local:            http://localhost:3000
+  - On Your Network:  http://192.168.0.34:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<h2>🤝 Contributing</h2>
 
-## Learn More
+Contributions, bug reports and new ideias, are always welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Please, visit the [issues page](https://github.com/DouglasAmarelo/gbconnect-alertas/issues).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+<h2>Show your support</h2>
+
+Give a ⭐️ if this project helped you!
+
+
+<h2>👤 Author</h2>
+
+**DouglasAmarelo**
+* Twitter: [@DouglasAmarelo](https://twitter.com/DouglasAmarelo)
+* Github: [@DouglasAmarelo](https://github.com/DouglasAmarelo)
+
