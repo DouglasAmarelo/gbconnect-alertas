@@ -1,13 +1,37 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-type CardProps = {
-  yesterday?: boolean;
-  today?: boolean;
-  tomorrow?: boolean;
+type CardType = {
+  type?: 'YESTERDAY' | 'TODAY' | 'TOMORROW' | false;
 };
 
-export const Card = styled.article<CardProps>`
+const cardTypes = {
+  YESTERDAY: css`
+    order: 1;
+    &:before {
+      content: 'Ontem';
+    }
+  `,
+  TODAY: css`
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    order: 2;
+    position: relative;
+    transform: scale(1);
+    z-index: 10;
+    &:before {
+      content: 'Hoje';
+    }
+  `,
+  TOMORROW: css`
+    order: 3;
+    &:before {
+      content: 'Amanhã';
+    }
+  `,
+};
+
+export const Card = styled.article<CardType>`
   align-items: center;
   background: var(--primaryTextColor);
   border-radius: 4px;
@@ -23,6 +47,8 @@ export const Card = styled.article<CardProps>`
   transform: scale(0.8);
   transition: box-shadow 0.2s, opacity 0.3s, transform 0.3s;
 
+  ${({ type }) => type && cardTypes[type]}
+
   @media all and (min-width: 640px) {
     flex-direction: column;
     margin: 0.5em;
@@ -32,41 +58,6 @@ export const Card = styled.article<CardProps>`
   @media all and (max-width: 640px) {
     width: 100%;
   }
-
-  ${({ yesterday }) =>
-    yesterday &&
-    css`
-      order: 1;
-
-      &:before {
-        content: 'Ontem';
-      }
-    `}
-
-  ${({ tomorrow }) =>
-    tomorrow &&
-    css`
-      order: 3;
-
-      &:before {
-        content: 'Amanhã';
-      }
-    `}
-
-  ${({ today }) =>
-    today &&
-    css`
-      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
-      opacity: 1;
-      order: 2;
-      position: relative;
-      transform: scale(1);
-      z-index: 10;
-
-      &:before {
-        content: 'Hoje';
-      }
-    `}
 
   &:hover {
     opacity: 1;

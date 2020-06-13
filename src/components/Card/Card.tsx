@@ -5,24 +5,20 @@ import * as S from './Card.styled';
 
 import PersonProps from '../../types/Person';
 
-type CardProps = PersonProps & {
-  date?: string;
-  yesterday?: boolean;
-  today?: boolean;
-  tomorrow?: boolean;
+type CardType = {
+  type?: 'YESTERDAY' | 'TODAY' | 'TOMORROW' | false;
 };
 
-const Card: React.FC<CardProps> = ({
-  name,
-  nickName,
-  photo,
-  date,
-  ...orderedDays
-}) => {
+type CardProps = PersonProps & {
+  date?: string;
+  type?: CardType | any;
+};
+
+const Card: React.FC<CardProps> = ({ name, nickName, photo, date, type }) => {
   const formatedDate = moment(date).format('DD/MM');
 
   return (
-    <S.Card {...orderedDays}>
+    <S.Card type={type}>
       <header>
         <S.Date dateTime={date}>{formatedDate}</S.Date>
         <small>{name}</small>
