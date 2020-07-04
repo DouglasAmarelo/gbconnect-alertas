@@ -9,21 +9,19 @@ import { Footer } from './components/Footer';
 import { People } from './components/People';
 import { CardList } from './components/CardList';
 
-function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <div className="App">
-        <Header />
+const App = () => (
+  <>
+    <GlobalStyle />
+    <div className="App">
+      <Header />
 
-        <CardList people={people} />
+      <CardList people={people} />
 
-        <People people={people} />
+      <People people={people} />
 
-        <Footer />
-      </div>
-    </>
-  );
-}
+      <Footer />
+    </div>
+  </>
+);
 
 export default App;

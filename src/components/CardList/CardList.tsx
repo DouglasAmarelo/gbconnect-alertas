@@ -28,10 +28,6 @@ const CardList = ({ people }: PeopleProps) => {
   return (
     <S.CardList>
       {filteredScale.map(({ person, date }) => {
-        console.log(
-          '@@@@ date.includes(YESTERDAY): ',
-          date.includes(YESTERDAY) ? { type: 'YESTERDAY' } : { type: 'INFO' }
-        );
         return (
           <Card
             key={person}
