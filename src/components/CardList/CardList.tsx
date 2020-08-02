@@ -15,36 +15,33 @@ const CardList = ({ people }: PeopleProps) => {
   const YESTERDAY = moment(TODAY).subtract('day', 1).format(FORMAT_DATE);
   const TOMORROW = moment(TODAY).add('day', 1).format(FORMAT_DATE);
 
-  const filteredScale = scale.filter(
-    ({ date }) =>
-      date.includes(YESTERDAY) ||
-      date.includes(TODAY) ||
-      date.includes(TOMORROW)
-  );
-
-  const findDate = (date: string) =>
-    date === YESTERDAY || date === TODAY || date === TOMORROW;
+  const YTD_Person = scale.filter(({ date }) => date.includes(YESTERDAY))[0];
+  const TDY_Person = scale.filter(({ date }) => date.includes(TODAY))[0];
+  const TMW_Person = scale.filter(({ date }) => date.includes(TOMORROW))[0];
 
   return (
     <S.CardList>
-      {filteredScale.map(({ person, date }) => {
-        console.log(
-          '@@@@ date.includes(YESTERDAY): ',
-          date.includes(YESTERDAY) ? { type: 'YESTERDAY' } : { type: 'INFO' }
-        );
-        return (
+      <>
+        {YTD_Person && (
           <Card
-            key={person}
-            date={date.find(findDate)}
-            type={
-              (date.includes(YESTERDAY) && 'YESTERDAY') ||
-              (date.includes(TODAY) && 'TODAY') ||
-              (date.includes(TOMORROW) && 'TOMORROW')
-            }
-            {...people[person]}
+            date={YESTERDAY}
+            type="YESTERDAY"
+            {...people[YTD_Person.person]}
           />
-        );
-      })}
+        )}
+
+        {TDY_Person && (
+          <Card date={TODAY} type="TODAY" {...people[TDY_Person.person]} />
+        )}
+
+        {TMW_Person && (
+          <Card
+            date={TOMORROW}
+            type="TOMORROW"
+            {...people[TMW_Person.person]}
+          />
+        )}
+      </>
     </S.CardList>
   );
 };
