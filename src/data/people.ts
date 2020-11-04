@@ -41,6 +41,11 @@ const people: PeopleObject = {
     nickName: 'Rafa',
     photo: 'rafa.jpg',
   },
+  'Guto': {
+    name: 'José Augusto Bolina',
+    nickName: 'Guto',
+    photo: 'guto.jpg',
+  },
   'John': {
     name: 'John Guerson',
     nickName: 'John',
