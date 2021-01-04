@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 import * as S from './Card.styled';
@@ -26,7 +27,9 @@ const Card: React.FC<CardProps> = ({ name, nickName, photo, date, type }) => {
       </header>
 
       <S.ImageContainer>
-        <img src={`/images/${photo}`} alt={nickName} />
+        <Link to={nickName}>
+          <img src={`/images/${photo}`} alt={nickName} />
+        </Link>
       </S.ImageContainer>
     </S.Card>
   );

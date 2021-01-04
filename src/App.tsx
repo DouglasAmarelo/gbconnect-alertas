@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import people from './data/people';
 
@@ -8,22 +9,33 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { People } from './components/People';
 import { CardList } from './components/CardList';
+import { Schedule } from './components/Schedule';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <GlobalStyle />
-      <div className="App">
-        <Header />
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <>
+              <Header />
 
-        <CardList people={people} />
+              <CardList people={people} />
 
-        <People people={people} />
+              <People people={people} />
 
-        <Footer />
-      </div>
-    </>
+              <Footer />
+            </>
+          </Route>
+
+          <Route path="/:nickname">
+            <Schedule />
+          </Route>
+        </Switch>
+        <GlobalStyle />
+      </BrowserRouter>
+    </div>
   );
-}
+};
 
 export default App;

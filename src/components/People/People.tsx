@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as S from './People.style';
 
@@ -11,7 +12,9 @@ const People: React.FC<PeopleProps> = ({ people }) => (
         <S.PepopleTitle>Ordem da escala dos responsáveis:</S.PepopleTitle>
         <S.List>
           {Object.values(people).map(({ nickName }) => (
-            <li key={nickName}>{nickName}</li>
+            <li key={nickName}>
+              <Link to={nickName}>{nickName}</Link>
+            </li>
           ))}
         </S.List>
       </>

@@ -22,7 +22,6 @@ export const List = styled.ul`
     border: 1px solid var(--primaryTextColor);
     font-family: var(--primaryFontFamily);
     font-size: min(20px, 5vw);
-    padding: 0.5em;
     margin: 0.2em;
     text-align: center;
 
@@ -30,9 +29,21 @@ export const List = styled.ul`
       min-width: 110px;
     }
 
+    a {
+      color: var(--primaryTextColor);
+      display: block;
+      height: 100%;
+      padding: 0.5em;
+      text-decoration: none;
+    }
+
     &:hover {
       background: var(--primaryTextColor);
-      color: var(--secondaryTextColor);
+
+      &,
+      a {
+        color: var(--secondaryTextColor);
+      }
     }
   }
 `;
